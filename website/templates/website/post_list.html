@@ -11,9 +11,11 @@
 
     <ul id="myUL"> <!--to do's in a list -->
       {% for post in posts %}
+        {% if post.author == request.user %}
           {% if post.title == 'notcomplete' %} <!-- add button-->
             <li><a href="{% url 'post_detail' pk=post.pk %}" id="todotext"> {{ post.text }} </a></li>
           {% endif %}
+        {% endif %}
       {% endfor %}
     </ul> <br><br>
 
@@ -21,8 +23,10 @@
     <h1 class="page-header">Completed</h1> <!-- completed to do's -->
     <ul id="myULcomplete"> <!--to do's in a list -->
       {% for post in posts %}
-          {% if post.title == 'complete' %} <!-- add button-->
-            <li class="checked"><a href="{% url 'post_detail' pk=post.pk %}" id="todotext"> {{ post.text }} </a></li>
+          {% if post.author == request.user %}
+            {% if post.title == 'complete' %} <!-- add button-->
+              <li class="checked"><a href="{% url 'post_detail' pk=post.pk %}" id="todotext"> {{ post.text }} </a></li>
+              {% endif %}
           {% endif %}
       {% endfor %}
     </ul> <br><br>
