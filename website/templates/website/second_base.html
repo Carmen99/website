@@ -15,11 +15,12 @@
     <title>System for Improving Resuscitation</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet"> <!-- bootstrap basic css -->
     <link href="{% static 'css/ie10-viewport-bug-workaround.css' %}" rel="stylesheet"> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="{% static 'css/goals.css' %}" rel="stylesheet">
     <script src="{% static 'js/ie-emulation-modes-warning.js' %}"></script> <!--bootstrap default for a bug in ie -->
-
+    <link href="{% static 'css/blog.css' %}" rel="stylesheet">
 <!-- From here added by Lars------------------------------------------------------------------>
   <link href="{% static 'css/profile.css' %}" rel="stylesheet">
 <!-- Till here added by Lars------------------------------------------------------------------>
@@ -80,6 +81,11 @@
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+          <!-- From here added by Lars------------------------------------------------------------------>
+
+          <!-- Till here added by Lars------------------------------------------------------------------>
+
           {% block content %}
           {% endblock %}
         </div>

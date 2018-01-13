@@ -4,6 +4,7 @@ from . import views
 from django.conf.urls import include
 from rest_framework.routers import DefaultRouter
 from rest_framework.schemas import get_schema_view #corejson
+from rest_framework.documentation import include_docs_urls
 
 # From here added by Lars----------------------------------------------------------------
 
@@ -63,5 +64,6 @@ urlpatterns = [ #all the links to the right webpage
     url(r'^settings/$', views.colorsettings, name='colorsettings'),
     url(r'^settings/(?P<pk>\d+)/$', views.color_grey, name='color_grey'),
     url(r'^help/$', views.help_color, name='help_color'),
+    url(r'^docs/', include_docs_urls(title='API S.I.R.')),
 
 ]

@@ -117,7 +117,37 @@
           <p class="please_login" style = "font-size:30px;">Sorry! You cannot visit the site when you are not logged in.</p>
           <p class="please_login"><a href="{% url 'login' %}">Please, login</a></p>
 
+          <div class="col-xs-6 col-sm-3 placeholder" id="bpprogress" style="visibility:hidden;" >
+              <h4>Blood Pressure</h4>
+              <p id="bpprogresstext">Keep up the good work! You succeeded to reach the optimal of 85.0 systolic pressure.</p>
+          </div>
+          <div class="col-xs-6 col-sm-3 placeholder" id="frprogress" style="visibility:hidden;">
+              <h4>Flow Rate</h4>
+              <p id="frprogresstext">Keep up the good work! You succeeded to reach the optimal of 20.0 ml/min.</p>
+          </div>
+          <div class="col-xs-6 col-sm-3 placeholder" id="dprogress" style="visibility:hidden;">
+              <h4>Depth</h4>
+              <p id="dprogresstext">Keep up the good work! You succeeded to reach the optimal of 28.0 mm.</p>
+          </div>
+          <div class="col-xs-6 col-sm-3 placeholder" id="sprogress" style="visibility:hidden;">
+              <h4>Speed</h4>
+              <p id="sprogresstext">Keep up the good work! You succeeded to reach the optimal of 120.0 bpm.</p>
+          </div>
+          <canvas id="canvas" style="visibility:hidden;"></canvas> <!--display the graph -->
+
+          <button id="bpline" style="visibility:hidden;">show blood pressure</button> <!--the four button to show/hide the graph lines-->
+          <button id="frline" style="visibility:hidden;">show flow rate</button>
+          <button id="dline" style="visibility:hidden;">show depth</button>
+          <button id="sline" style="visibility:hidden;">show speed</button>
+
+
+
+          {% block depth2 %}
+          {% endblock %}
+
+
           {% endif %}
+
           <!-- Till here added by Lars------------------------------------------------------------------>
 
         </div>

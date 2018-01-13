@@ -34,9 +34,10 @@
             <div id = "widthid">
                 {% if comment.target %}
                 <span class = "listauthor"> @{{comment.target}}</span>
+                <span class = "listauthor"> by:  {{ comment.author}}</span>
                 {% endif %}
               </div>
-                <span class = "listauthor"> by:  {{ comment.author}}</span>
+
                 <div class="listdate">{{ comment.created_date }}</div>
                 <p class = "listtext">  {{ comment.text|linebreaks }}</p>
 

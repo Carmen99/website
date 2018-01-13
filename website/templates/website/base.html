@@ -96,6 +96,11 @@
           {% else %}
           <p class="please_login" style = "font-size:30px;">Sorry! You cannot visit the site when you are not logged in.</p>
           <p class="please_login"><a href="{% url 'login' %}">Please, login</a></p>
+          <div id="addtodo" style="visibility:hidden;">
+          </div>
+          {% block colordata %}
+          {% endblock %}
+
 
           {% endif %}
           <!-- Till here added by Lars------------------------------------------------------------------>

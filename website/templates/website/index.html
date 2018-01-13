@@ -125,11 +125,36 @@
           </div>
           {% block depth2 %}
           {% endblock %}
+
           <!-- From here added by Lars------------------------------------------------------------------>
           {% else %}
           <p class="please_login" style = "font-size:30px;">Sorry! You cannot visit the site when you are not logged in.</p>
           <p class="please_login"><a href="{% url 'login' %}">Please, login</a></p>
 
+          <div class="row placeholders" style="visibility:hidden;">
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img id="orangecircle" src="{% static 'img/circleorangeconstant.png' %}" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail"> <!-- als tijd over plaatjes veranderen -->
+              <h4> <span id="bp10value">00</span> sys.</h4>
+              <span class="text-muted">Blood Pressure</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img id="pinkcircle" src="{% static 'img/circlepinkconstant.png' %}" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4><span id="fr10value">00</span> ml&#47;min</h4>
+              <span class="text-muted">Flow Rate</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img id="bluecircle" src="{% static 'img/circleblueconstant.png' %}" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4><span id="d10value">00</span> mm</h4>
+              <span class="text-muted">Depth</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img id="greencircle" src="{% static 'img/circlegreenconstant.png' %}" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4><span id="s10value">00</span> bpm</h4>
+              <span class="text-muted">Speed</span>
+            </div>
+          </div>
+          {% block depth3 %}
+          {% endblock %}
           {% endif %}
           <!-- Till here added by Lars------------------------------------------------------------------>
 
