@@ -32,12 +32,12 @@
           <a href="{% url 'add_comment_to_comment' pk=comment.pk  %}" id = "nostyling">
           <div class = "commentreplies" id = "shadow">
             <div id = "widthid">
+
                 {% if comment.target %}
                 <span class = "listauthor"> @{{comment.target}}</span>
-                <span class = "listauthor"> by:  {{ comment.author}}</span>
                 {% endif %}
+                <span class = "listauthor"> by:  {{ comment.author}}</span>
               </div>
-
                 <div class="listdate">{{ comment.created_date }}</div>
                 <p class = "listtext">  {{ comment.text|linebreaks }}</p>
 
